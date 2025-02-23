@@ -51,4 +51,13 @@ public class TicTacToeTest {
     	game.play(2, 0);//X
     }
 	
+    @Test
+    public void testVerticalWin()
+    {
+    	game.play(0, 0);//X
+    	game.play(1, 0);//O
+    	game.play(0, 1);//X
+    	game.play(1, 1);//O
+    	game.play(0, 2);//X
+    }
 }
