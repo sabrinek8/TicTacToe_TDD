@@ -101,7 +101,9 @@ public class TicTacToe extends JFrame {
         }
         currentPlayer = 'X';
     }
-
+    public char getCurrentPlayer() {
+        return currentPlayer;
+    }
     public static void main(String[] args) {
         SwingUtilities.invokeLater(TicTacToe::new);
     }

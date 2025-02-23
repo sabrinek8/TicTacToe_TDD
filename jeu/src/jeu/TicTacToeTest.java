@@ -31,5 +31,15 @@ public class TicTacToeTest {
 		assertEquals("Case déjà occupée",exception.getMessage());
     	}
 	}
+    
+    @Test
+    public void testPlayerAlternation() {
+        assertEquals('X', game.getCurrentPlayer());
+        game.play(0, 0);
+        assertEquals('O', game.getCurrentPlayer());
+        game.play(0, 1);
+        assertEquals('X', game.getCurrentPlayer());
+            
+    }
 	
 }
