@@ -85,5 +85,20 @@ public class TicTacToeTest {
         assertTrue( game.checkWinner());
         
     }
+    @Test
+    public void testDrawGame() {
+        game.play(0, 0); // X
+        game.play(0, 1); // O
+        game.play(0, 2); // X
+        game.play(1, 0); // O
+        game.play(1, 2); // X
+        game.play(1, 1); // O
+        game.play(2, 1); // X
+        game.play(2, 0); // O
+        game.play(2, 2); // X
+        assertTrue(game.isBoardFull());
+        assertFalse(game.checkWinner());
+    }
+    
     
 }
