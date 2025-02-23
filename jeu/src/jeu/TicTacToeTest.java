@@ -41,5 +41,14 @@ public class TicTacToeTest {
         assertEquals('X', game.getCurrentPlayer());
             
     }
+    
+    @Test
+    public void  testHorizontalWin() {
+    	game.play(0, 0);//X
+    	game.play(0, 1);//O
+    	game.play(1, 0);//X
+    	game.play(0, 2);//O
+    	game.play(2, 0);//X
+    }
 	
 }
