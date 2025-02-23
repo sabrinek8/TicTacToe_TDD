@@ -20,5 +20,16 @@ public class TicTacToeTest {
         }
     }
 
+    @Test
+    public void testCellAlreadyOccupied() {
+    	try {
+    		game.play(0, 0);
+    		game.play(0,0);
+    	}
+		catch(RuntimeException exception)
+    	{
+		assertEquals("Case déjà occupée",exception.getMessage());
+    	}
+	}
 	
 }

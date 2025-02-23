@@ -22,7 +22,7 @@ public class TicTacToe extends JFrame {
         setVisible(true);
     }
 
-    private void initializeBoard() {
+    public void initializeBoard() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 JButton button = new JButton();
@@ -56,7 +56,7 @@ public class TicTacToe extends JFrame {
         }
     }
 
-    private void validateMove(int x, int y) {
+    public void validateMove(int x, int y) {
         if (x < 0 || x > 2 || y < 0 || y > 2) {
             throw new RuntimeException("Coordonnées hors limite!");
         }
@@ -65,11 +65,11 @@ public class TicTacToe extends JFrame {
         }
     }
 
-    private void switchPlayer() {
+    public void switchPlayer() {
         currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
     }
 
-    private boolean checkWinner() {
+    public boolean checkWinner() {
         // Vérification des lignes et colonnes
         for (int i = 0; i < 3; i++) {
             if (board[i][0] == currentPlayer && board[i][1] == currentPlayer && board[i][2] == currentPlayer) return true;
@@ -81,7 +81,7 @@ public class TicTacToe extends JFrame {
         return false;
     }
 
-    private boolean isBoardFull() {
+    public boolean isBoardFull() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 if (board[i][j] == ' ') {
@@ -92,7 +92,7 @@ public class TicTacToe extends JFrame {
         return true;
     }
 
-    private void resetGame() {
+    public void resetGame() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 board[i][j] = ' ';
